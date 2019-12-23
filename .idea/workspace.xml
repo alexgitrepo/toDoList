@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4eb3f87-09e2-4ab3-96f5-07659ce48228" name="Default Changelist" comment="" />
+    <list default="true" id="a4eb3f87-09e2-4ab3-96f5-07659ce48228" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListFooter .js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListFooter/ToDoListFooter .js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListHeader/ToDoListHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTasks.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1URBbQdkE93L75LX8zSxPbGcqzD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
@@ -18,6 +31,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\ItIncubator\01-todolist\todolist\src\components\ToDoListTasks" />
+      <recent name="C:\ItIncubator\01-todolist\todolist\src\components\ToDoListHeader" />
+      <recent name="C:\ItIncubator\01-todolist\todolist\src\components\ToDoListFooter" />
+      <recent name="C:\ItIncubator\01-todolist\todolist\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ItIncubator\01-todolist\todolist\src" />
     </key>
@@ -45,10 +64,34 @@
       <option name="presentableId" value="Default" />
       <updated>1575309599107</updated>
       <workItem from="1575309602490" duration="3517000" />
+      <workItem from="1575356037266" duration="613000" />
+      <workItem from="1575381337597" duration="668000" />
+      <workItem from="1575526588131" duration="106000" />
+      <workItem from="1575891899278" duration="12305000" />
+      <workItem from="1576342370560" duration="258000" />
+      <workItem from="1576478596414" duration="1909000" />
+      <workItem from="1576491792139" duration="608000" />
+      <workItem from="1576508069588" duration="12578000" />
+      <workItem from="1576763686761" duration="982000" />
+      <workItem from="1576945700279" duration="3734000" />
+      <workItem from="1577112999977" duration="12567000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
