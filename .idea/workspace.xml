@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4eb3f87-09e2-4ab3-96f5-07659ce48228" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/ToDoListHeader/ToDoListHeader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTask/ToDoListTask.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoListFooter .js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListFooter/ToDoListFooter .js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoListHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListHeader/ToDoListHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TodoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDoListFooter/ToDoListFooter .js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListFooter/ToDoListFooter .js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDoListFooter/ToDoListFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListFooter/ToDoListFooter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDoListHeader/ToDoListHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListHeader/ToDoListHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTask/ToDoListTask.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTask/ToDoListTask.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ToDoListTasks/ToDoListTasks.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +77,19 @@
       <workItem from="1576508069588" duration="12578000" />
       <workItem from="1576763686761" duration="982000" />
       <workItem from="1576945700279" duration="3734000" />
-      <workItem from="1577112999977" duration="12567000" />
+      <workItem from="1577112999977" duration="14049000" />
+      <workItem from="1577335497863" duration="1118000" />
+      <workItem from="1577442266222" duration="1719000" />
+      <workItem from="1577447081966" duration="44000" />
+      <workItem from="1577449388239" duration="614000" />
+      <workItem from="1577451555373" duration="205000" />
+      <workItem from="1577456312012" duration="503000" />
+      <workItem from="1577457170386" duration="675000" />
+      <workItem from="1577469266627" duration="1233000" />
+      <workItem from="1577701685548" duration="1056000" />
+      <workItem from="1577721185379" duration="9047000" />
+      <workItem from="1578134540266" duration="729000" />
+      <workItem from="1578495576871" duration="8657000" />
     </task>
     <servers />
   </component>

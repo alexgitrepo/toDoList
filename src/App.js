@@ -6,56 +6,111 @@ import ToDoListFooter from "./components/ToDoListFooter/ToDoListFooter ";
 
 
 class App extends React.Component {
-       state = {
-        tasks: [{title: "JS", isDone: true, priority: 'priority: VeryHigh'},
-            {title: "HTML", isDone: true, priority: 'priority: high'},
-            {title: "CSS", isDone: true, priority: 'priority: high'},
-            {title: "React", isDone: false, priority: 'priority: VeryHigh'}],
-        filterValue: "ALL",
-        newTask : ""
+    componentDidMount() {
+        this.restoreState()
     }
-   ;
-    changeFilterCallback = (newFilterValue)=> {
-        this.setState({filterValue:newFilterValue})
-}
+
+    ;
+    state = {
+        tasks: [],
+        filterValue: "ALL",
+        newTask: "",
+    nextTaskId : 0
+    }
+    ;
+    saveState=()=>{
+        let stateAsString=JSON.stringify(this.state)
+        localStorage.setItem('our-state',stateAsString)
+    }
+    restoreState=()=>{
+        let state ={
+            tasks:[],
+            nextTaskId : 0,
+            filterValue: 'ALL'
+        }
+
+        let stateAsString=localStorage.getItem('our-state')
+        if (stateAsString!=null){
+            state=JSON.parse(stateAsString)
+        }
+        this.setState(state)
+    }
+
+    changeFilterCallback = (newFilterValue) => {
+        this.setState({filterValue: newFilterValue})
+    }
 
     onChangeTaskCallback = (text) => {
-        this.setState({newTask:text})
+        this.setState({newTask: text})
 
     }
-
     onAddTaskClickCallback = () => {
-        let newTask = {title: this.state.newTask, isDone: false, priority: 'priority: Low'};
+        this.state.nextTaskId++
+        let newTask = {id: this.state.nextTaskId, title: this.state.newTask, isDone: false, priority: 'priority: Low'};
         let newTasks = [...this.state.tasks, newTask]
         this.setState({
             tasks: newTasks
         })
-        this.setState({newTask:''});
+        this.setState({newTask: ''},this.saveState);
+
     }
 
-    onIsDoneChangedCallback=(newValue, currentTask)=>{
-        let newTasks = this.state.tasks.map((item)=> { if (item===currentTask){ return {...item,isDone:newValue}}
-            else {return item}
-         })
-        this.setState({tasks:newTasks})
+    changeTask=(taskId,obj)=>{
+        let newTasks = this.state.tasks.map((item) => {
+            if (item.id === taskId) {
+                return {...item, ...obj}
+            } else {
+                return item
             }
+        })
+        this.setState({tasks: newTasks})
+    }
 
+    onIsDoneChangedCallback = (newValue, currentTask) => {
+        this.changeTask(currentTask,{isDone:newValue})
+        // let newTasks = this.state.tasks.map((item) => {
+        //     if (item.id === currentTask) {
+        //         return {...item, isDone: newValue}
+        //     } else {
+        //         return item
+        //     }
+        // })
+        // this.setState({tasks: newTasks})
+    }
+
+    changeStatusCallback =(currentTask,newValue)=>{
+        this.changeTask(currentTask,{title:newValue})
+        // let newTasks = this.state.tasks.map((item) => {
+        //     if (item.id === currentTask) {
+        //         return {...item, title: newValue}
+        //     } else {
+        //         return item
+        //     }
+        // })
+        // this.setState({tasks: newTasks})
+    }
 
 
     render = () => {
+        let newTasks = this.state.tasks.filter(t => {
+            if (this.state.filterValue === 'ALL') {
+                return true
+            } else if (this.state.filterValue === 'Completed' && t.isDone === true) {
+                return true
+            } else if (this.state.filterValue === 'Active' && t.isDone === false) {
+                return true
+            }
+        })
         return (
             <div className="App">
                 <div className="todoList">
-                    <ToDoListHeader state={this.state.newTask} onAddTaskClickCallback={this.onAddTaskClickCallback} onChangeTaskCallback={this.onChangeTaskCallback} />
-                    <ToDoListTasks
-                    tasks={this.state.tasks.filter(t=>{if (this.state.filterValue === 'ALL'){
-                        return true
-                    }
-                     else if(this.state.filterValue === 'Completed' && t.isDone===true){return true }
-                     else if(this.state.filterValue === 'Active' && t.isDone===false){return true }
-                    })} onIsDoneChangedCallback={this.onIsDoneChangedCallback}
+                    <ToDoListHeader state={this.state.newTask} onAddTaskClickCallback={this.onAddTaskClickCallback}
+                                    onChangeTaskCallback={this.onChangeTaskCallback}/>
+                    <ToDoListTasks changeStatusCallback={this.changeStatusCallback}
+                        tasks={newTasks} onIsDoneChangedCallback={this.onIsDoneChangedCallback}
                     />
-                    <ToDoListFooter changeFilterCallback={this.changeFilterCallback} filterValue={this.state.filterValue}/>
+                    <ToDoListFooter changeFilterCallback={this.changeFilterCallback}
+                                    filterValue={this.state.filterValue}/>
                 </div>
             </div>
         );
